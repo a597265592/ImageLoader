@@ -18,6 +18,8 @@ import java.util.concurrent.Executors;
 
 public class ImageLoader {
     ImageCache mImageCache = new MemoryCache();
+    int mLoadingImage;
+    int mLoadingFailedImageId;
     ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     public void displayImage(final String url, final ImageView imageView) {

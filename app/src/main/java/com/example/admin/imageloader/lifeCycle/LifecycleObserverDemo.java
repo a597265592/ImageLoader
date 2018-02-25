@@ -1,4 +1,4 @@
-package com.example.admin.imageloader.lifeCycle;
+package com.example.admin.imageloader.lifecycle;
 
 import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.LifecycleObserver;

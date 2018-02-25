@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextView = (TextView) findViewById(R.id.tv_text);
-        mTextView.setBackgroundDrawable(new XLRoundDrawable.Builder().setAllRound(75).setCenterColor(getResources().getColor(R.color.colorAccent)).setStoreWidth(2).builder().getDrawable());
+        mTextView.setBackgroundDrawable(new XLRoundDrawable.Builder().setAllRoundDp(75).setCenterColor(getResources().getColor(R.color.colorAccent)).setStrokeWidthDp(2).builder());
 
     }
 }

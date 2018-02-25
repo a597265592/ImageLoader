@@ -1,4 +1,4 @@
-package com.example.admin.imageloader.lifeCycle;
+package com.example.admin.imageloader.lifecycle;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

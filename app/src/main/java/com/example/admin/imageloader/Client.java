@@ -1,9 +1,7 @@
 package com.example.admin.imageloader;
 
 
-import com.example.admin.imageloader.builder.Builder;
-import com.example.admin.imageloader.builder.Director;
-import com.example.admin.imageloader.builder.MacBuilder;
+import com.example.admin.imageloader.others.ClassA;
 
 /**
  * Created by admin on 2017/4/25.
@@ -11,11 +9,15 @@ import com.example.admin.imageloader.builder.MacBuilder;
 public class Client {
 
     public static void main(String[] args) {
+        ClassA classA = new ClassA(){
 
-        Builder builder = new MacBuilder();
-        Director director = new Director(builder);
-        director.constract("inter主板","ios 10系统","aoc显示器");
-//        System.out.println(builder.create().toString());
-        System.out.println(new MacBuilder().builderOS("ios 10系统1").builderBoard("inter主板1").builderDisplay("aoc显示器1").create().toString());
+            @Override
+            public void a() {
+                System.out.println("打印A成功");
+            }
+        };
+        classA.a();
     }
+
+
 }

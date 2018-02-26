@@ -17,7 +17,7 @@
             <!--</intent-filter>-->
         </activity>
 
-        <activity android:name=".ontouch.DemoActivity" >
+        <activity android:name=".rxJava.RxjavaDemoActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -5,9 +5,15 @@ import com.example.admin.imageloader.unitTest.DateUtil;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
+
 
 
 /**
@@ -16,10 +22,29 @@ import java.util.Date;
  * Created by chenjie on 2018/2/28.
  */
 
+@RunWith(Parameterized.class)
 public class DateUtilTest {
     private String time = "2017-10-15 16:00:02";
     private long timeStamp = 1508054402000L;
     private Date mDate;
+
+    public DateUtilTest(String time){
+        this.time = time;
+    }
+//
+//    public DateUtilTest(){
+//    }
+
+    @Parameterized.Parameters
+    public  static Collection primeNumber(){
+        return Arrays.asList("2017-10-15 16:00:02",
+                "2017-10-15 ",
+                "2017-10-15 16:00"
+                );
+    }
+
+    @Rule
+    public  MyRule mMyRule = new MyRule();
 
     @Before
     public void setUp() throws Exception{
@@ -34,7 +59,12 @@ public class DateUtilTest {
     }
 
     @Test
-    public void testTime() throws Exception{
-        Assert.assertNotEquals(4, DateUtil.dateToStamp(time));
+    public void testTime2()throws Exception{
+        Assert.assertEquals(time, DateUtil.dateToStamp(time));
     }
+
+//    @Test
+//    public void testTime() throws Exception{
+//        Assert.assertThat("1121564544", new IsMobilePhoneMatcher());
+//    }
 }

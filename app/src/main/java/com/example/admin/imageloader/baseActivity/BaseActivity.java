@@ -3,7 +3,7 @@ package com.example.admin.imageloader.baseActivity;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 
 /**
  * 功能：
@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by chenjie on 2018/2/26.
  */
 
-public abstract class BaseActivity extends AppCompatActivity{
+public abstract class BaseActivity extends FragmentActivity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

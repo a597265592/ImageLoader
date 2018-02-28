@@ -1,18 +1,38 @@
 package com.example.admin.imageloader;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    private TextView mTextView;
+import com.example.admin.imageloader.baseActivity.BaseActivity;
+import com.example.admin.imageloader.greenDao.UserDaoManger;
+import com.example.admin.imageloader.greenDao.UserInfo;
+
+import java.util.List;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mTextView = (TextView) findViewById(R.id.tv_text);
-        mTextView.setBackgroundDrawable(new XLRoundDrawable.Builder().setAllRoundDp(75).setCenterColor(getResources().getColor(R.color.colorAccent)).setStrokeWidthDp(2).builder());
 
     }
+
+    @Override
+    protected void bindData() {
+        List<UserInfo> userInfos = UserDaoManger.getInstance(this).queryUserList(2);
+        for (UserInfo userInfo: userInfos) {
+            System.out.println(userInfo);
+        }
+    }
+
+    @Override
+    protected void initView() {
+    }
+
+
+    @Override
+    public void initParam() {
+
+    }
+
 }

@@ -125,4 +125,17 @@ public class UserDaoManger {
         List<UserInfo> list = qb.list();
         return list;
     }
+
+    /**
+     * 查询用户列表
+     */
+    public List<UserInfo> queryUserList(String name) {
+        DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
+        DaoSession daoSession = daoMaster.newSession();
+        UserInfoDao userDao = daoSession.getUserInfoDao();
+        QueryBuilder<UserInfo> qb = userDao.queryBuilder();
+        qb.where(UserInfoDao.Properties.Name.gt(name)).orderAsc(UserInfoDao.Properties.Name);
+        List<UserInfo> list = qb.list();
+        return list;
+    }
 }

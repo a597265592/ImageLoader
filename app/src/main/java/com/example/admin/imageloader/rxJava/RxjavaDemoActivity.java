@@ -41,9 +41,10 @@ public class RxjavaDemoActivity extends BaseActivity {
 
     @Override
     protected void bindData() {
-        Observable.concat(getStringObser(), getIntObser()).subscribe(new Consumer<String>() {
+        Observable.concat(getStringObser(), getIntObser()).observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io()).subscribe(new Consumer<String>() {
             @Override
             public void accept(String s) throws Exception {
+                Log.e("观察者在线程为------------",Thread.currentThread().getName());
                 Log.e(TAG + "输出", s);
             }
         });
@@ -121,6 +122,7 @@ public class RxjavaDemoActivity extends BaseActivity {
         return Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
+                Log.e("被观察者所在的线程------------",Thread.currentThread().getName());
                 e.onNext("a");
                 e.onNext("b");
                 e.onNext("c");

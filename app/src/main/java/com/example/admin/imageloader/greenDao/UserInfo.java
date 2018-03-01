@@ -14,13 +14,15 @@ public class UserInfo {
     private String name;
     private String sex;
     private int age;
+    private String studentId;
 
-    @Generated(hash = 1259810139)
-    public UserInfo(Long id, String name, String sex, int age) {
+    @Generated(hash = 920490394)
+    public UserInfo(Long id, String name, String sex, int age, String studentId) {
         this.id = id;
         this.name = name;
         this.sex = sex;
         this.age = age;
+        this.studentId = studentId;
     }
 
     @Generated(hash = 1279772520)
@@ -62,6 +64,14 @@ public class UserInfo {
     @Override
     public String toString() {
         return "id:"+id+"name:"+name+"sex:"+sex+"age"+age;
+    }
+
+    public String getStudentId() {
+        return this.studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 }
 

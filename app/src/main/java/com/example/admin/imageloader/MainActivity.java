@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void bindData() {
-        List<UserInfo> userInfos = UserDaoManger.getInstance(this).queryUserList(2);
+        List<UserInfo> userInfos = UserDaoManger.getInstance(this).queryUserListByAge(200);
         for (UserInfo userInfo: userInfos) {
             System.out.println(userInfo);
         }

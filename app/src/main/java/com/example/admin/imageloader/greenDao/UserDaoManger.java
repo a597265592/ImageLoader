@@ -129,12 +129,22 @@ public class UserDaoManger {
     /**
      * 查询用户列表
      */
-    public List<UserInfo> queryUserList(String name) {
+    public List<UserInfo> queryUserListByName(String name) {
         DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
         DaoSession daoSession = daoMaster.newSession();
         UserInfoDao userDao = daoSession.getUserInfoDao();
         QueryBuilder<UserInfo> qb = userDao.queryBuilder();
         qb.where(UserInfoDao.Properties.Name.gt(name)).orderAsc(UserInfoDao.Properties.Name);
+        List<UserInfo> list = qb.list();
+        return list;
+    }
+
+    public List<UserInfo> queryUserListByAge(int age){
+        DaoMaster daoMaster = new DaoMaster(getWritableDatabase());
+        DaoSession daoSession = daoMaster.newSession();
+        UserInfoDao userInfoDao = daoSession.getUserInfoDao();
+        QueryBuilder<UserInfo> qb = userInfoDao.queryBuilder();
+        qb.where(UserInfoDao.Properties.Age.gt(age)).orderAsc(UserInfoDao.Properties.Age);
         List<UserInfo> list = qb.list();
         return list;
     }

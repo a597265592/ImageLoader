@@ -20,7 +20,7 @@ import javax.lang.model.util.Elements;
  * Created by chenjie on 2018/3/2.
  */
 
-class AnnotatedClass {
+public class AnnotatedClass {
     private static class TypeUtil {
         static final ClassName BINDER = ClassName.get("com.example.api", "ViewBinder");
         static final ClassName PROVIDER = ClassName.get("com.example.api", "ViewFinder");

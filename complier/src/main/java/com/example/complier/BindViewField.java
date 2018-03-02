@@ -14,7 +14,7 @@ import javax.lang.model.type.TypeMirror;
  * Created by chenjie on 2018/3/2.
  */
 
-class BindViewField {
+public class BindViewField {
     private VariableElement mVariableElement;
     private int mResId;
 

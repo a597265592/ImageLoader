@@ -15,6 +15,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.tv_app_text_view)
     TextView mTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-//        mTextView = findViewById(R.id.tv_app_text_view);
+        mTextView = findViewById(R.id.tv_app_text_view);
     }
 
 

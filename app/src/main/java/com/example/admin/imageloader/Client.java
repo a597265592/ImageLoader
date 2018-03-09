@@ -17,6 +17,19 @@ public class Client {
             }
         };
         classA.a();
+        try{
+            System.out.println("a");
+            System.out.println("b");
+            if (true){
+                throw new NullPointerException();
+            }
+            System.out.println("c");
+        }catch (NullPointerException e){
+            System.out.println("d");
+        }finally {
+            System.out.println("e");
+        }
+        System.out.println("f");
     }
 
 

@@ -31,12 +31,16 @@ public abstract class BaseActivity extends FragmentActivity{
         bindData();
     }
 
+    public void doAction(){
+
+    }
+
 
     protected abstract void bindData();
 
     protected abstract void initView();
 
-    public abstract void initParam() ;
+    public abstract void initParam();
 
 
 }

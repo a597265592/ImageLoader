@@ -8,12 +8,11 @@
     android:gravity="center"
     tools:context="com.example.admin.imageloader.MainActivity">
 
+
     <TextView
-        android:id="@+id/tv_app_text_view"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Hello World!"
-        android:gravity="center" />
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 

@@ -1,6 +1,9 @@
 package com.example.admin.imageloader;
 
+import com.example.admin.imageloader.api.Api;
 import com.example.admin.imageloader.api.HttpService;
+import com.example.admin.imageloader.model.AiModel;
+import com.example.admin.imageloader.model.ToeknModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;

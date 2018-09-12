@@ -6,7 +6,6 @@ import com.example.admin.imageloader.baseActivity.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +32,6 @@ public class MainActivity extends BaseActivity {
     public void initParam() {
 
     }
-
 
 
 }

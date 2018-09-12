@@ -1,4 +1,4 @@
-package com.example.admin.imageloader;
+package com.example.admin.imageloader.tools;
 
 import android.graphics.drawable.GradientDrawable;
 

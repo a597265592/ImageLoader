@@ -1,6 +1,4 @@
-package com.example.admin.imageloader.Config;
-
-import com.umeng.socialize.PlatformConfig;
+package com.example.admin.imageloader.config;
 
 /**
  * 功能：

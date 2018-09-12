@@ -2,7 +2,7 @@ package com.example.admin.imageloader;
 
 import android.app.Application;
 
-import com.example.admin.imageloader.Config.ThirdConfigManager;
+import com.example.admin.imageloader.config.ThirdConfigManager;
 import com.example.admin.imageloader.share.UMengShareHelper;
 import com.umeng.commonsdk.UMConfigure;
 

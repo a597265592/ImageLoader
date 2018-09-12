@@ -74,18 +74,18 @@ public class HttpManage {
         });
         retrofit = new Retrofit.Builder()
                 .client(builder.build())
-//如果网络访问返回的字符串，而不是json数据格式，要使用下面的转换器
+                //如果网络访问返回的字符串，而不是json数据格式，要使用下面的转换器
 //                .addConverterFactory(ScalarsConverterFactory.create())
                 //如果网络访问返回的是json字符串，使用gson转换器
                 .addConverterFactory(GsonConverterFactory.create())
 //此处顺序不能和上面对调，否则不能同时兼容普通字符串和Json格式字符串
 //为了支持rxjava,需要添加下面这个把 Retrofit 转成RxJava可用的适配类
-//                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-//基本网络地址
+//                .addCallAdapt erFactory(RxJavaCallAdapterFactory.create())
+//基本网络地址0
                 .baseUrl(getHost()).build();
     }
 
-    /**
+     /**
      * 如果有不同的请求HOST可继承此类并Override
      *
      * @return

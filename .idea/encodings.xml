@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/annotation/src/main/java/com/example/annotation/BindView.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/annotation/src/main/java/com/example/annotation/BindView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/build.gradle" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/complier/src/main/java/com/example/complier/AnnotatedClass.java" charset="UTF-8" />
   </component>
 </project>

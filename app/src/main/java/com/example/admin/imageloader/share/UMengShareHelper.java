@@ -3,7 +3,7 @@ package com.example.admin.imageloader.share;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.admin.imageloader.Config.ThirdConfigManager;
+import com.example.admin.imageloader.config.ThirdConfigManager;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;

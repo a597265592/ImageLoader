@@ -3,7 +3,7 @@ apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.example.admin.imageloader"
         minSdkVersion 15
@@ -41,35 +41,35 @@ greendao {
 
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    compile 'com.squareup.okhttp:okhttp:2.5.0'
-    compile 'com.squareup.okio:okio:1.6.0'
-    compile 'org.greenrobot:greendao:3.0.1'
-    compile 'org.greenrobot:greendao-generator:3.0.0'
-    testCompile 'junit:junit:4.12'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    api 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    api 'com.squareup.okhttp:okhttp:2.5.0'
+    api 'com.squareup.okio:okio:1.6.0'
+    api 'org.greenrobot:greendao:3.0.1'
+    api 'org.greenrobot:greendao-generator:3.0.0'
+    testImplementation 'junit:junit:4.12'
+    api 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     implementation 'android.arch.lifecycle:runtime:1.0.3'
     annotationProcessor "android.arch.lifecycle:compiler:1.0.0"
-    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'com.google.auto.service:auto-service:1.0-rc2'
-    compile 'com.squareup:javapoet:1.7.0'
-    compile project(':annotation')
-    compile project(':api')
-    compile 'com.umeng.sdk:common:1.5.1'
-    compile 'com.umeng.sdk:utdid:1.1.5.3'
-    compile 'com.umeng.sdk:share-core:6.9.1'
-    compile 'com.umeng.sdk:share-qq:6.9.1'
-    compile 'com.umeng.sdk:share-wechat:6.9.1'
-    compile 'com.umeng.sdk:share-sina:6.9.1'
-    compile 'cn.jiguang.sdk:jpush:3.1.1'
-    compile 'cn.jiguang.sdk:jcore:1.1.9'
-    compile 'com.google.dagger:dagger:2.6'
+    api 'io.reactivex.rxjava2:rxjava:2.0.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'com.google.auto.service:auto-service:1.0-rc2'
+    api 'com.squareup:javapoet:1.7.0'
+    api project(':annotation')
+    api project(':api')
+    api 'com.umeng.sdk:common:1.5.1'
+    api 'com.umeng.sdk:utdid:1.1.5.3'
+    api 'com.umeng.sdk:share-core:6.9.1'
+    api 'com.umeng.sdk:share-qq:6.9.1'
+    api 'com.umeng.sdk:share-wechat:6.9.1'
+    api 'com.umeng.sdk:share-sina:6.9.1'
+    api 'cn.jiguang.sdk:jpush:3.1.1'
+    api 'cn.jiguang.sdk:jcore:1.1.9'
+    api 'com.google.dagger:dagger:2.6'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.6'
     annotationProcessor project(':complier')
 }

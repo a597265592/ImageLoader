@@ -47,6 +47,7 @@ dependencies {
     })
     implementation 'com.android.support:appcompat-v7:26.1.0'
     api 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    implementation 'com.android.support:recyclerview-v7:26.0.0-alpha1'
     api 'com.squareup.okhttp:okhttp:2.5.0'
     api 'com.squareup.okio:okio:1.6.0'
     api 'org.greenrobot:greendao:3.0.1'
